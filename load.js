@@ -41,9 +41,7 @@ const observer = new MutationObserver((records) => {
 
         if (!wf) return console.log('no workflow-div')
         wf.id = 'table-' + e + '-' + t
-        const nameString = 'data[STATUS_' + e + '-' + t + '][owner]'
-        wf.querySelector('.tfl-avatar-list').dataset.avatarHiddenname = nameString
-        wf.querySelector('input[type=hidden]').name = nameString
+        wf.querySelector('input[type=hidden]').name = 'data[STATUS_' + e + '-' + t + '][owner]'
         fn.apply(this, arguments)
       }
     }
